@@ -1,0 +1,77 @@
+17:35:02.914 [main] INFO  r.a.b.BookShopApiApplication - Starting BookShopApiApplication using Java 18.0.1.1 on DESKTOP-9IAEV89 with PID 31656 (G:\Coledge\Java\bookShopApiJava\bookShopApi\build\classes\java\main started by badme in G:\Coledge\Java\bookShopApiJava)
+17:35:02.916 [main] INFO  r.a.b.BookShopApiApplication - No active profile set, falling back to 1 default profile: "default"
+17:35:03.303 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:35:03.312 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:35:03.312 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:35:03.312 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+17:35:03.361 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:35:03.361 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 423 ms
+17:35:03.395 [main] WARN  r.a.b.controller.ParserJsonFile - Fail to open or read file
+17:35:03.396 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageController' defined in file [G:\Coledge\Java\bookShopApiJava\bookShopApi\build\classes\java\main\ru\apiBook\bookshopapi\controller\MessageController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.apiBook.bookshopapi.controller.MessageController]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "ru.apiBook.bookshopapi.entity.Root.getAccount()" because "this.root" is null
+17:35:03.397 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+17:35:03.404 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:35:03.421 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageController' defined in file [G:\Coledge\Java\bookShopApiJava\bookShopApi\build\classes\java\main\ru\apiBook\bookshopapi\controller\MessageController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.apiBook.bookshopapi.controller.MessageController]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "ru.apiBook.bookshopapi.entity.Root.getAccount()" because "this.root" is null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at ru.apiBook.bookshopapi.BookShopApiApplication.main(BookShopApiApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [ru.apiBook.bookshopapi.controller.MessageController]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "ru.apiBook.bookshopapi.entity.Root.getAccount()" because "this.root" is null
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 17 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "ru.apiBook.bookshopapi.entity.Root.getAccount()" because "this.root" is null
+	at ru.apiBook.bookshopapi.controller.MessageController.<init>(MessageController.java:29)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 19 common frames omitted
+17:35:54.250 [main] INFO  r.a.b.BookShopApiApplication - Starting BookShopApiApplication using Java 18.0.1.1 on DESKTOP-9IAEV89 with PID 19596 (G:\Coledge\Java\bookShopApiJava\bookShopApi\build\classes\java\main started by badme in G:\Coledge\Java\bookShopApiJava)
+17:35:54.255 [main] INFO  r.a.b.BookShopApiApplication - No active profile set, falling back to 1 default profile: "default"
+17:35:54.636 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:35:54.642 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:35:54.642 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:35:54.643 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+17:35:54.690 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:35:54.690 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 413 ms
+17:35:54.728 [main] INFO  r.a.b.controller.MessageController - Message Controller start
+17:35:54.852 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:35:54.861 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17:35:54.866 [main] INFO  r.a.b.BookShopApiApplication - Started BookShopApiApplication in 0.762 seconds (JVM running for 1.061)
+17:36:08.781 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:36:08.782 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:36:08.782 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+17:36:19.767 [http-nio-8080-exec-3] ERROR r.a.b.controller.MessageController - Incorrect data
+17:39:16.204 [main] INFO  r.a.b.BookShopApiApplication - Starting BookShopApiApplication using Java 18.0.1.1 on DESKTOP-9IAEV89 with PID 29468 (G:\Coledge\Java\bookShopApiJava\bookShopApi\build\classes\java\main started by badme in G:\Coledge\Java\bookShopApiJava)
+17:39:16.210 [main] INFO  r.a.b.BookShopApiApplication - No active profile set, falling back to 1 default profile: "default"
+17:39:16.592 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:39:16.598 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:39:16.598 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:39:16.598 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+17:39:16.647 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:39:16.647 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 415 ms
+17:39:16.685 [main] INFO  r.a.b.controller.MessageController - Message Controller start
+17:39:16.814 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:39:16.823 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17:39:16.829 [main] INFO  r.a.b.BookShopApiApplication - Started BookShopApiApplication in 0.771 seconds (JVM running for 1.073)
+17:39:30.143 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:39:30.143 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+17:39:30.143 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
